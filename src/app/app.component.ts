@@ -10,5 +10,6 @@ export class AppComponent {
 
   calendarPlugins = [dayGridPlugin];
 
+
   title = 'miniprojectangularandboot';
 }
