@@ -39,7 +39,7 @@ export class AffaireTableauDeBordComponent implements OnInit {
   edit(id) {
 
 
-    this.router.navigate(['/joueur/edit', id]);
+    this.router.navigate(['/affaires/edit/', id]);
     this.affaireService.editMode = true;
 
 

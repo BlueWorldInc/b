@@ -40,7 +40,7 @@ export class DocumentListComponent implements OnInit {
   edit(id) {
 
 
-    this.router.navigate(['/joueur/edit', id]);
+    this.router.navigate(['/documents/edit/', id]);
     this.documentService.editMode = true;
 
 

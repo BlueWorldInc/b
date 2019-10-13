@@ -25,13 +25,15 @@ const routes: Routes = [
   {
     path: 'documents', component: DocumentComponent, children: [
       { path: 'list', component: DocumentListComponent },
-      { path: 'form', component: DocumentFormComponent }
+      { path: 'form', component: DocumentFormComponent },
+      { path: 'edit/:id', component: DocumentFormComponent }
     ]
   },
   {
     path: 'affaires', component: AffaireComponent, children: [
       { path: 'tab', component: AffaireTableauDeBordComponent },
-      { path: 'form', component: AffaireFormComponent }
+      { path: 'form', component: AffaireFormComponent },
+      { path: 'edit/:id', component: AffaireFormComponent }
     ]
   },
   {
@@ -48,13 +50,15 @@ const routes: Routes = [
   {
     path: 'taches', component: TacheComponent, children: [
       { path: 'tab', component: TacheTableauDeBordComponent },
-      { path: 'form', component: TacheFormComponent }
+      { path: 'form', component: TacheFormComponent },
+      { path: 'edit/:id', component: TacheFormComponent }
     ]
   },
   {
     path: 'utilisateurs', component: UtilisateurComponent, children: [
       { path: 'list', component: UtilisateurListComponent },
-      { path: 'form', component: UtilisateurFormComponent }
+      { path: 'form', component: UtilisateurFormComponent },
+      { path: 'edit/:id', component: UtilisateurFormComponent }
     ]
   },
   {

@@ -39,7 +39,7 @@ export class UtilisateurListComponent implements OnInit {
   edit(id) {
 
 
-    this.router.navigate(['/joueur/edit', id]);
+    this.router.navigate(['/utilisateurs/edit/', id]);
     this.utilisateurService.editMode = true;
 
 
