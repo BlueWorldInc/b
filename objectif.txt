@@ -1,0 +1,19 @@
+cree les differents entites (5) de chaque. ok
+tester les differents entités à l'aide de swagger et de findall. ok
+integration de joueur. ok
+afficher la liste de chaque entités dans angular dans la liste. ok
+
+faire les touches de navigations. (1h) ok
+
+faire un crud de chaque entités. (3h)
+faire les deletes de chaque entités (dans la liste). ok
+tester le deletes de chaque entités. ok
+faire les pages de crud de chaque entités (edit et ajout). ok
+
+faire le calendrier à l'aide de fullcalendar (afficher sur une autre page
+que l'acceuil, faire en sorte que de changer les données, faire
+en sorte que les données soit dynamique (visualisation), faire en
+sorte que les données soit dynamique (lien vers modification)).
+
+faire la page de login (visuel).
+faire la page de login (login).

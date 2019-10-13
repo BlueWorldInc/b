@@ -1,0 +1,6 @@
+git config --list
+git config --global --edit
+git config --global user.name "BlueWorldInc"
+git config --global user.email "keamybakunin@gmail.com"
+git config user.name "BlueWorldInc"
+git config user.email "keamybakunin@gmail.com"
