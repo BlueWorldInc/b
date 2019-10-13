@@ -18,18 +18,22 @@
                             <th>Id Affaire</th>
                         </thead>
                         <!-- <tr *ngFor="let item of joueurs|filter:term, let i = index"> -->
-                        <tr *ngFor="let dummy of ' '.repeat(100).split(''), let x = index">
-                            <td>test </td>
-                            <td>test </td>
-                            <td>test </td>
-                            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi consectetur fugiat recusandae quos ipsam excepturi repellat placeat ducimus culpa ab? Nobis beatae aperiam quia repellat, laboriosam fugiat consequatur quo saepe blanditiis recusandae repellendus non veritatis facilis, aliquid cupiditate porro sunt esse? In quas harum architecto quia inventore, cum quae repudiandae id delectus explicabo corrupti error adipisci eveniet quasi consequatur nulla, amet impedit consectetur. Iure deleniti, dolore facilis quos unde placeat magnam, natus mollitia tempore dolor, maiores quisquam. Hic aperiam illum expedita assumenda! Voluptatibus, maiores. Odit quas maxime illo aspernatur aliquid repellat obcaecati maiores aut omnis, numquam atque voluptates impedit iure! </td>
-                            <td>test </td>
-                            <td>{{item.id}} x </td>
-                            <td>{{item.nom}} x </td>
-                            <td>{{item.prenom}} x</td>
-                            <td>{{item.taille}} x</td>
-                            <td>{{item.poids}}x</td>
-                            <td>{{item.numero}}x</td>
+                        <tr *ngFor="let item of documents, let i = index">
+                        <!-- <tr *ngFor="let dummy of ' '.repeat(100).split(''), let x = index"> -->
+                            <!-- <td>test </td> -->
+                            <!-- <td>test </td> -->
+                            <!-- <td>test </td> -->
+                            <!-- <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi consectetur fugiat recusandae quos ipsam excepturi repellat placeat ducimus culpa ab? Nobis beatae aperiam quia repellat, laboriosam fugiat consequatur quo saepe blanditiis recusandae repellendus non veritatis facilis, aliquid cupiditate porro sunt esse? In quas harum architecto quia inventore, cum quae repudiandae id delectus explicabo corrupti error adipisci eveniet quasi consequatur nulla, amet impedit consectetur. Iure deleniti, dolore facilis quos unde placeat magnam, natus mollitia tempore dolor, maiores quisquam. Hic aperiam illum expedita assumenda! Voluptatibus, maiores. Odit quas maxime illo aspernatur aliquid repellat obcaecati maiores aut omnis, numquam atque voluptates impedit iure! </td> -->
+                            <!-- <td>test </td> -->
+                            <td>{{item.idDocument}}</td>
+                            <td>{{item.dateCreation}}</td>
+                            <td>{{item.nom}}</td>
+                            <td>{{item.description}}</td>
+                            <td>{{item.affaire.idAffaire}}</td>
+
+                            <!-- <td>{{item.taille}} x</td> -->
+                            <!-- <td>{{item.poids}}x</td> -->
+                            <!-- <td>{{item.numero}}x</td> -->
                             <!-- <td><button class="btn btn-warning" (click)="edit(item.id)">Edit</button></td> -->
                             <!-- <td><button class="btn btn-danger" (click)="delete(item.id, i)">Delete</button></td> -->
                         </tr>

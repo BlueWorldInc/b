@@ -29,33 +29,35 @@
                     <table class="table">
                         <thead>
                             <th>Id</th>
-                            <th>Date de creation</th>
-                            <th>Nom</th>
+                            <th>Reference</th>
+                            <th>Titre</th>
                             <th>Description</th>
-                            <th>Id Affaire</th>
+                            <th>Status</th>
+                            <th>Liste de taches</th>
+                            <th>Liste de Documents</th>
                         </thead>
-                        <!-- <tr *ngFor="let item of joueurs|filter:term, let i = index"> -->
-                        <tr *ngFor="let dummy of ' '.repeat(100).split(''), let x = index">
 
-                            <td>test </td>
-                            <td>test </td>
-                            <td>test </td>
-                            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi consectetur fugiat
+         
+
+
+                        <!-- <tr *ngFor="let item of joueurs|filter:term, let i = index"> -->
+                        <tr *ngFor="let item of affaires, let i = index">
+                        <!-- <tr *ngFor="let dummy of ' '.repeat(100).split(''), let x = index"> -->
+
+                            <td>{{item.idAffaire}}</td>
+                                <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi consectetur fugiat
                                 recusandae quos ipsam excepturi repellat placeat ducimus culpa ab? Nobis beatae aperiam
-                                quia repellat, laboriosam fugiat consequatur quo saepe blanditiis recusandae repellendus
-                                non veritatis facilis, aliquid cupiditate porro sunt esse? In quas harum architecto quia
-                                inventore, cum quae repudiandae id delectus explicabo corrupti error adipisci eveniet
-                                quasi consequatur nulla, amet impedit consectetur. Iure deleniti, dolore facilis quos
-                                unde placeat magnam, natus mollitia tempore dolor, maiores quisquam. Hic aperiam illum
-                                expedita assumenda! Voluptatibus, maiores. Odit quas maxime illo aspernatur aliquid
-                                repellat obcaecati maiores aut omnis, numquam atque voluptates impedit iure! </td>
-                            <td>test </td>
-                            <td>{{item.id}} x </td>
-                            <td>{{item.nom}} x </td>
-                            <td>{{item.prenom}} x</td>
-                            <td>{{item.taille}} x</td>
-                            <td>{{item.poids}}x</td>
-                            <td>{{item.numero}}x</td>
+                                    quia repellat, laboriosam fugiat consequatur quo saepe blanditiis recusandae repellendus
+                                    non veritatis facilis, aliquid cupiditate porro sunt esse? In quas harum architecto quia
+                                    inventore, cum quae repudiandae id delectus explicabo corrupti error adipisci eveniet
+                                    quasi consequatur nulla, amet impedit consectetur. Iure deleniti, dolore facilis quos
+                                    unde placeat magnam, natus mollitia tempore dolor, maiores quisquam. Hic aperiam illum
+                                    expedita assumenda! Voluptatibus, maiores. Odit quas maxime illo aspernatur aliquid
+                                    repellat obcaecati maiores aut omnis, numquam atque voluptates impedit iure! </td>
+                            <td>{{item.reference}}</td>
+                            <td>{{item.titre}}</td>
+                            <td>{{item.description}}</td>
+                            <td>{{i}}</td>
                             <!-- <td><button class="btn btn-warning" (click)="edit(item.id)">Edit</button></td> -->
                             <!-- <td><button class="btn btn-danger" (click)="delete(item.id, i)">Delete</button></td> -->
                         </tr>

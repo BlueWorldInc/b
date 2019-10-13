@@ -23,6 +23,13 @@ import { LoginErrorComponent } from './login/login-error/login-error.component';
 import { AffaireTableauDeBordComponent } from './affaire/affaire-tableau-de-bord/affaire-tableau-de-bord.component';
 import { TacheTableauDeBordComponent } from './tache/tache-tableau-de-bord/tache-tableau-de-bord.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { DocumentService } from 'src/service/document.service';
+import { HttpClientModule } from '@angular/common/http';
+import { PhaseService } from 'src/service/phase.service';
+import { AffaireService } from 'src/service/affaire.service';
+import { TacheService } from 'src/service/tache.service';
+import { TribunalService } from 'src/service/tribunal.service';
+import { UtilisateurService } from 'src/service/utilisateur.service';
 
 @NgModule({
   declarations: [
@@ -50,9 +57,17 @@ import { FullCalendarModule } from '@fullcalendar/angular';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FullCalendarModule
+    FullCalendarModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    DocumentService, 
+    PhaseService, 
+    AffaireService, 
+    TacheService,
+    TribunalService,
+    UtilisateurService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

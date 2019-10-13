@@ -9,30 +9,30 @@ import { map } from 'rxjs/operators';
     providedIn: 'root'
 
 })
-export class DocumentService {
+export class JoueurService {
 
-    URL = 'http://localhost:8080/apiDocument';
-    documents: any[] = [];
+    URL = 'http://localhost:8080/apiJoueur';
+    joueurs: any[] = [];
     editMode = false;
 
     constructor(private http: HttpClient) { }
 
 
-    add(document: any) {
+    add(joueur: any) {
 
-        return this.http.post(this.URL + '/ajouter', document, { observe: 'response' });
+        return this.http.post(this.URL + '/ajouter', joueur, { observe: 'response' });
 
     }
 
-    update(document: any) {
+    update(joueur: any) {
 
-        return this.http.put(this.URL + '/update', document, { observe: 'response' });
+        return this.http.put(this.URL + '/update', joueur, { observe: 'response' });
 
     }
 
     findAll() {
 
-        return this.http.get<any[]>(this.URL + '/Documents').pipe(map(value => this.documents = value));
+        return this.http.get<any[]>(this.URL + '/joueurs').pipe(map(value => this.joueurs = value));
 
     }
 
