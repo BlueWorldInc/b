@@ -30,6 +30,8 @@ import { AffaireService } from 'src/service/affaire.service';
 import { TacheService } from 'src/service/tache.service';
 import { TribunalService } from 'src/service/tribunal.service';
 import { UtilisateurService } from 'src/service/utilisateur.service';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,10 @@ import { UtilisateurService } from 'src/service/utilisateur.service';
     BrowserModule,
     AppRoutingModule,
     FullCalendarModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     DocumentService, 

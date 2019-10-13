@@ -1,26 +1,51 @@
-<form>
+<form [formGroup]="form">
     <div class="form-group">
         <div class="form-group col-md-6">
                 <p>Ajout d'un document</p>
             <div class="form-group col-md-6">
 
                 <label>Id du document</label>
-                <input type="number" class="form-control" id="inputIdDocument">
+                <input type="number" class="form-control" id="idDocument">
+                <!-- <div *ngIf="form.get('idDocument').invalid && form.get('idDocument').touched">
+                    <p *ngIf="form.get('idDocument').errors.required" class="text-danger">Ce champ est obligatoire
+                    </p>
+                </div> -->
 
                 <label>Date de creation</label>
-                <input type="date" class="form-control" id="inputDateCreationDocument">
+                <input type="date" class="form-control" id="dateCreation">
+                <!-- <div *ngIf="form.get('dateCreation').invalid && form.get('dateCreation').touched">
+                    <p *ngIf="form.get('dateCreation').errors.required" class="text-danger">Ce champ est obligatoire
+                    </p>
+                </div> -->
 
                 <label>Nom du document</label>
-                <input type="text" class="form-control" id="inputNomDocument" >
+                <input type="text" class="form-control" id="nom">
+                <!-- <div *ngIf="form.get('nom').invalid && form.get('nom').touched">
+                    <p *ngIf="form.get('nom').errors.required" class="text-danger">Ce champ est obligatoire
+                    </p>
+                </div> -->
 
                 <label>Description du document</label>
                 <input type="text" class="form-control" id="inputDescriptionDocument">
+                <!-- <div *ngIf="form.get('inputDescriptionDocument').invalid && form.get('inputDescriptionDocument').touched">
+                    <p *ngIf="form.get('inputDescriptionDocument').errors.required" class="text-danger">Ce champ est obligatoire
+                    </p>
+                </div> -->
 
                 <label>Id de l'affaire</label>
-                <input type="number" class="form-control" id="inputIdAffaireDocument" >
+                <input type="number" class="form-control" id="inputIdAffaireDocument">
                 <br>
-                <button type="submit" class="btn btn-primary">Ajouter</button>
+                <!-- <div *ngIf="form.get('inputIdAffaireDocument').invalid && form.get('inputIdAffaireDocument').touched">
+                    <p *ngIf="form.get('inputIdAffaireDocument').errors.required" class="text-danger">Ce champ est obligatoire
+                    </p>
+                </div> -->
+                <!-- <button type="submit" class="btn btn-primary">Ajouter</button> -->
+                <button type="submit" class="btn btn-success"
+                (click)="add()">Ajouter</button>
+                <button type="submit" *ngIf="editMode" [disabled]="!form.valid" class="btn btn-success"
+                (click)="update()">Update</button>
             </div>
         </div>
     </div>
+
 </form>

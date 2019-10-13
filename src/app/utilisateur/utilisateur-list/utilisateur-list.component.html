@@ -1,12 +1,15 @@
 <div class="row">
     <div class="container">
         <div class="navbar navbar-light bg-light">
-            <!-- <input type="text" [(ngModel)]="term" class="form-control" type="text" placeholder="Recherche"> -->
+            <input type="text" [(ngModel)]="term" class="form-control" type="text" placeholder="Recherche">
         </div>
         
         <div class="card">
             <div class="card-header">
                 Liste des utilisateurs
+                <div class="float-right">
+                    <a href="/utilisateurs/form" class="btn btn-primary">Ajout</a>
+                </div>
             </div>
             <div class="card-body">
                 <table class="table">
@@ -18,9 +21,12 @@
                         <th>Role</th>
                         <th>Actif</th>
                         <th>Id des taches</th>
+                        <th>Edit</th>
+                        <th>Suppression</th>
+
                     </thead>
                     <!-- <tr *ngFor="let item of joueurs|filter:term, let i = index"> -->
-                    <tr *ngFor="let item of utilisateurs, let i = index">
+                    <tr *ngFor="let item of utilisateurs|filter:term, let i = index">
                     <!-- <tr *ngFor="let dummy of ' '.repeat(100).split(''), let x = index"> -->
                         <!-- <td>test </td> -->
                         <!-- <td>test </td> -->
@@ -39,8 +45,8 @@
                         <!-- <td>{{item.taille}} x</td> -->
                         <!-- <td>{{item.poids}}x</td> -->
                         <!-- <td>{{item.numero}}x</td> -->
-                        <!-- <td><button class="btn btn-warning" (click)="edit(item.id)">Edit</button></td> -->
-                        <!-- <td><button class="btn btn-danger" (click)="delete(item.id, i)">Delete</button></td> -->
+                        <td><button class="btn btn-warning" (click)="edit(item.id)">Edit</button></td>
+                        <td><button class="btn btn-danger" (click)="delete(item.id, i)">Delete</button></td>
                     </tr>
                 </table>
             </div>
